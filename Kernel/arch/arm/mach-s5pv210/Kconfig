@@ -9,6 +9,11 @@
 
 if ARCH_S5PV210
 
+config MACH_S5PC110_ARIES_OC
+	bool "Enableb CPU OverClock"
+	help
+	  Say Y here to enable CPUf OverClock
+
 config CPU_S5PV210
 	bool
 	select PLAT_S5P
@@ -92,6 +97,7 @@ config CPU_S5PV210_EVT1
 	help
 	  Support EVT1
 endchoice
+
 
 choice
         prompt "Select S1 locality"
@@ -196,4 +202,9 @@ config S5PV210_SETUP_CSIS
 	default y
 	help
 	  Common setup code for MIPI-CSIS
+
+
 endif
+
+
+
